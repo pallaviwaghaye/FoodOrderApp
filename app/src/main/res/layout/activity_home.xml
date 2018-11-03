@@ -86,7 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/offwhite"
+        android:background="@drawable/toolbar_background"
         android:color="@color/black"
         app:headerLayout="@layout/drawer_header"
         app:itemIconTint="@color/nav_drawer_item_select"

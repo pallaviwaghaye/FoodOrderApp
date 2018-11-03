@@ -1,8 +1,6 @@
 package com.webakruti.foodorder.Fragment;
 
-import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -16,8 +14,8 @@ import com.webakruti.foodorder.Adapter.CauroselPageAdapter;
 import com.webakruti.foodorder.Adapter.FavoriteCuisineAdapter;
 import com.webakruti.foodorder.Adapter.FoodHygieneAdapter;
 import com.webakruti.foodorder.Adapter.InspiredCollectionsAdapter;
-import com.webakruti.foodorder.Adapter.NonVegFoodDetailsAdapter;
-import com.webakruti.foodorder.Adapter.VegFoodDetailsAdapter;
+import com.webakruti.foodorder.Adapter.GetFoodDeliveredAdapter;
+import com.webakruti.foodorder.Adapter.GoOutLunchDinnerAdapter;
 import com.webakruti.foodorder.R;
 import com.webakruti.foodorder.pageindicator.PageControl;
 
@@ -74,12 +72,12 @@ public class HomeFragment extends Fragment {
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(new VegFoodDetailsAdapter(getActivity(), 6));
+        recyclerView.setAdapter(new GoOutLunchDinnerAdapter(getActivity(), 6));
 
         recyclerView1 = (RecyclerView) rootView.findViewById(R.id.recyclerView1);
         LinearLayoutManager layoutManager1 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView1.setLayoutManager(layoutManager1);
-        recyclerView1.setAdapter(new NonVegFoodDetailsAdapter(getActivity(), 6));
+        recyclerView1.setAdapter(new GetFoodDeliveredAdapter(getActivity(), 6));
 
         recyclerView2 = (RecyclerView) rootView.findViewById(R.id.recyclerView2);
         LinearLayoutManager layoutManager2 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);

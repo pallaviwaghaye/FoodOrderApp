@@ -23,7 +23,9 @@
         <activity android:name=".UI.RegisterActivity" />
         <activity android:name=".UI.HomeActivity" />
         <activity android:name=".UI.ForgotPasswordActivity" />
-        <activity android:name=".Adapter.InspiredCollectionsAdapter"></activity>
+        <activity android:name=".Adapter.InspiredCollectionsAdapter" />
+        <activity android:name=".UI.GoOutForLunchDinnerActivity" />
+        <activity android:name=".UI.FoodDeliveryRestroActivity"></activity>
     </application>
 
 </manifest>

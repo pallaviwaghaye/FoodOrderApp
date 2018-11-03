@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutImages"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutFoodDeliveryImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="180dp"
+            android:background="@color/offwhite"
+            />
+
+        <ImageView
+            android:id="@+id/back_nav_arrow"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/back_arrow_white"
+            />
+        </RelativeLayout>
+        <com.webakruti.foodorder.pageindicator.PageControl
+            android:id="@+id/page_control"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:background="@color/offwhite"
+            android:padding="15dp"
+            app:normalIndicator="@color/grey"
+            app:selectedIndicator="#ecbd1e" />
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/relativeLayoutLunchDinner"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:weightSum="100">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="20">
+                <TextView
+                    android:id="@+id/textViewDishName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fuel Station Cafe and Restro"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="80">
+                <TextView
+                    android:id="@+id/textViewDishRating"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:text="3.4"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/green"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginTop="5dp">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="100">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity ="center"
+                    android:layout_weight="20">
+                    <TextView
+                        android:id="@+id/textViewFoodDelivered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delivering food to"
+                        android:textSize="12dp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/mid_gray"/>
+                    <TextView
+                        android:id="@+id/textViewFoodDeliveryAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Work (Bajaj Nagar, Nagpur)"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linaerLayoutOrderDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="80">
+
+                    <TextView
+                        android:id="@+id/textViewOrderDelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Change"
+                        android:gravity="bottom|center_vertical"
+                        android:textSize="13dp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/green"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginTop="5dp">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:id="@+id/textViewVegOnly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Veg Only"
+                        android:layout_marginRight="10dp"
+                        android:gravity="bottom|center_vertical"
+                        android:textSize="12dp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/mid_gray"/>
+                   <Switch
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:padding="5dp"
+                       />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recommended"
+                android:textSize="18dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+    <LinearLayout
+        android:id="@+id/linearLayoutRecommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewRecommended"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray"
+                android:layout_marginTop="5dp">
+            </View>
+        <LinearLayout
+            android:id="@+id/linearLayoutStarters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mini Meals"
+                android:textSize="18dp"
+
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="100">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity ="center"
+                    android:layout_weight="25">
+                    <TextView
+                        android:id="@+id/textViewMiniMeals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Paneer butter masala with rice"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/textViewPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs 259"
+                        android:textColor="@color/mid_gray"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linaerLayoutAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="75">
+
+                    <TextView
+                        android:id="@+id/textViewAdd"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:background="@drawable/addto_cart_button"
+                        android:textSize="10dp"
+                        android:text="Add +"
+                        android:textColor="@color/green"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="100">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity ="center"
+                    android:layout_weight="25">
+                    <TextView
+                        android:id="@+id/textViewMiniMeals2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dal makhani with rice"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/textViewPrice2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs 309"
+                        android:textColor="@color/mid_gray"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linaerLayoutAdd2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="75">
+
+                    <TextView
+                        android:id="@+id/textViewAdd2"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:background="@drawable/addto_cart_button"
+                        android:textSize="10dp"
+                        android:text="Add +"
+                        android:textColor="@color/green"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="100">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity ="center"
+                    android:layout_weight="25">
+                    <TextView
+                        android:id="@+id/textViewMiniMeals3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chicken manchurian with fried rice"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/textViewPrice3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs 350"
+                        android:textColor="@color/mid_gray"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linaerLayoutAdd3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="75">
+
+                    <TextView
+                        android:id="@+id/textViewAdd3"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:background="@drawable/addto_cart_button"
+                        android:textSize="10dp"
+                        android:text="Add +"
+                        android:textColor="@color/green"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="100">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity ="center"
+                    android:layout_weight="25">
+                    <TextView
+                        android:id="@+id/textViewMiniMeals4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Egg curry with rice"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/textViewPrice4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs 250"
+                        android:textColor="@color/mid_gray"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linaerLayoutAdd4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="75">
+
+                    <TextView
+                        android:id="@+id/textViewAdd4"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:background="@drawable/addto_cart_button"
+                        android:textSize="10dp"
+                        android:text="Add +"
+                        android:textColor="@color/green"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp">
+            </View>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
