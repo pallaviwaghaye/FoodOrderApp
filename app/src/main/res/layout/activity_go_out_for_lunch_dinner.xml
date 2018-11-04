@@ -19,12 +19,12 @@
             />
         <ImageView
             android:id="@+id/back_nav_arrow"
-            android:layout_width="23dp"
-            android:layout_height="23dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/back_arrow_white"
+            android:src="@drawable/action_back"
             />
         <ImageView
             android:id="@+id/left_nav"
@@ -329,11 +329,12 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:orientation="horizontal"
+              android:layout_marginLeft="15dp"
               android:layout_weight="50">
               <Button
               android:id="@+id/buttonRate1"
-              android:layout_width="50dp"
-              android:layout_height="40dp"
+              android:layout_width="45dp"
+              android:layout_height="35dp"
               android:text="1*"
               android:gravity="center"
               android:textSize="20dp"
@@ -341,8 +342,8 @@
               android:textColor="@color/grey"/>
               <Button
                   android:id="@+id/buttonRate2"
-                  android:layout_width="50dp"
-                  android:layout_height="40dp"
+                  android:layout_width="45dp"
+                  android:layout_height="35dp"
                   android:layout_marginLeft="10dp"
                   android:text="2*"
                   android:gravity="center"
@@ -351,8 +352,8 @@
                   android:textColor="@color/grey"/>
               <Button
                   android:id="@+id/buttonRate3"
-                  android:layout_width="50dp"
-                  android:layout_height="40dp"
+                  android:layout_width="45dp"
+                  android:layout_height="35dp"
                   android:layout_marginLeft="10dp"
                   android:text="3*"
                   android:gravity="center"
@@ -367,8 +368,8 @@
               android:layout_weight="50">
               <Button
                   android:id="@+id/buttonRate4"
-                  android:layout_width="50dp"
-                  android:layout_height="40dp"
+                  android:layout_width="45dp"
+                  android:layout_height="35dp"
                   android:text="4*"
                   android:layout_marginLeft="10dp"
                   android:gravity="center"
@@ -377,8 +378,8 @@
                   android:textColor="@color/grey"/>
               <Button
                   android:id="@+id/buttonRate5"
-                  android:layout_width="50dp"
-                  android:layout_height="40dp"
+                  android:layout_width="45dp"
+                  android:layout_height="35dp"
                   android:layout_marginLeft="10dp"
                   android:text="5*"
                   android:gravity="center"

@@ -8,19 +8,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.webakruti.foodorder.R;
 import com.webakruti.foodorder.UI.FoodDeliveryRestroActivity;
-import com.webakruti.foodorder.UI.GoOutForLunchDinnerActivity;
 
-public class FoodHygieneAdapter extends RecyclerView.Adapter<FoodHygieneAdapter.ViewHolder> {
+public class SweetToothAdapter extends RecyclerView.Adapter<SweetToothAdapter.ViewHolder> {
 
     private Context context;
     private int size;
 
-    public FoodHygieneAdapter(Context context, int size) {
+    public SweetToothAdapter(Context context, int size) {
         this.context = context;
         this.size = size;
 
@@ -28,14 +25,14 @@ public class FoodHygieneAdapter extends RecyclerView.Adapter<FoodHygieneAdapter.
 
     @NonNull
     @Override
-    public FoodHygieneAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_food_hygiene, viewGroup, false);
-        FoodHygieneAdapter.ViewHolder viewHolder = new FoodHygieneAdapter.ViewHolder(view);
+    public SweetToothAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_sweet_food, viewGroup, false);
+        SweetToothAdapter.ViewHolder viewHolder = new SweetToothAdapter.ViewHolder(view);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FoodHygieneAdapter.ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(@NonNull SweetToothAdapter.ViewHolder viewHolder, final int position) {
 
         /*//final Student.Studentbatch studentbatch = list.get(position);
 

@@ -11,44 +11,45 @@
             android:title="Home" />
 
         <item
-            android:id="@+id/navigationSwachhataKendra"
+            android:id="@+id/navigationYourDetails"
             android:checked="false"
             android:icon="@drawable/user1"
             android:title="Your Details" />
 
         <item
-            android:id="@+id/navigationEvent"
+            android:id="@+id/navigationEditDetails"
             android:checked="false"
             android:icon="@drawable/dateto"
             android:title="Edit Details" />
 
     </group>
 
+    <group
+        android:id="@+id/groupFoodDetails"
+        android:checkableBehavior="single">
         <item
-            android:checkableBehavior="single"
             android:title="Food Details" >
-        <menu>
 
         <item
-            android:id="@+id/navigationUseofTechnology"
+            android:id="@+id/navigationOrderDetails"
             android:checked="false"
             android:icon="@drawable/email5"
             android:title="Order Details" />
 
         <item
-            android:id="@+id/navigationVisionAndObjective"
+            android:id="@+id/navigationFoodList"
             android:checked="false"
             android:icon="@drawable/datefrom"
             android:title="Food List" />
-        </menu>
         </item>
+    </group>
     <group
         android:id="@+id/groupSettings"
         android:checkableBehavior="single">
 
 
         <item
-            android:id="@+id/navigationContactUs"
+            android:id="@+id/navigationSettings"
             android:checked="false"
             android:icon="@drawable/settings_blue1"
             android:title="Settings" />
@@ -59,6 +60,9 @@
             android:title="Logout" />
 
     </group>
+    <group
+        android:id="@+id/groupOthers"
+        android:checkableBehavior="single">
 
             <item
                 android:id="@+id/nav_feedback"
@@ -76,6 +80,6 @@
             <item
                 android:id="@+id/nav_about_us"
                 android:title="About Us" />
-
+    </group>
 
 </menu>

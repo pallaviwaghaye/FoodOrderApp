@@ -9,10 +9,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.webakruti.foodorder.Adapter.CauroselPageAdapter;
 import com.webakruti.foodorder.Adapter.RecommendedAdapter;
 import com.webakruti.foodorder.Adapter.RestroMenuCardImageAdapter;
+import com.webakruti.foodorder.Adapter.StartersAdapter;
 import com.webakruti.foodorder.R;
 import com.webakruti.foodorder.pageindicator.PageControl;
 
@@ -25,6 +27,10 @@ public class FoodDeliveryRestroActivity extends AppCompatActivity {
     private CauroselPageAdapter pagerAdapter;
     private PageControl page_control;
     private RecyclerView recyclerViewRecommended;
+    private RecyclerView recyclerViewStarters;
+
+    private LinearLayout linearLayoutShoppingCart;
+    private LinearLayout linearLayoutAddToCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +39,8 @@ public class FoodDeliveryRestroActivity extends AppCompatActivity {
 
 
         List<Drawable> list = new ArrayList<>();
-        list.add(getResources().getDrawable(R.drawable.navab_thali));
         list.add(getResources().getDrawable(R.drawable.kheer));
+        list.add(getResources().getDrawable(R.drawable.navab_thali));
         list.add(getResources().getDrawable(R.drawable.chicken_biriyani1));
 
 
@@ -47,11 +53,35 @@ public class FoodDeliveryRestroActivity extends AppCompatActivity {
 
     private void initViews()
     {
+        linearLayoutShoppingCart = (LinearLayout)findViewById(R.id.linearLayoutShoppingCart);
+        linearLayoutShoppingCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FoodDeliveryRestroActivity.this, CartActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        linearLayoutAddToCart = (LinearLayout)findViewById(R.id.linearLayoutAddToCart);
+        linearLayoutAddToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FoodDeliveryRestroActivity.this, CartActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         recyclerViewRecommended = (RecyclerView)findViewById(R.id.recyclerViewRecommended);
         LinearLayoutManager layoutManager = new LinearLayoutManager(FoodDeliveryRestroActivity.this, LinearLayoutManager.HORIZONTAL, false);
         recyclerViewRecommended.setLayoutManager(layoutManager);
         recyclerViewRecommended.setAdapter(new RecommendedAdapter(getApplicationContext(), 2));
+
+        recyclerViewStarters = (RecyclerView)findViewById(R.id.recyclerViewStarters);
+        LinearLayoutManager layoutManager1 = new LinearLayoutManager(FoodDeliveryRestroActivity.this, LinearLayoutManager.VERTICAL, false);
+        recyclerViewStarters.setLayoutManager(layoutManager1);
+        recyclerViewStarters.setAdapter(new StartersAdapter(getApplicationContext(), 6));
     }
 
     private void initCarouselData(List<Drawable> imageList) {

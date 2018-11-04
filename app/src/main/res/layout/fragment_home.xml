@@ -27,7 +27,7 @@
                 android:layout_height="40dp"
                 android:background="@drawable/search_css"
                 android:hint="Search for restaurant, cuisine or dish..."
-                android:drawableLeft="@drawable/search"
+                android:drawableLeft="@drawable/search_restaurent"
                 android:drawablePadding="10dp"
                 android:layout_margin="10dp"
                 android:textSize="16dp"
@@ -317,6 +317,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@android:color/darker_gray"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20">
+                    <TextView
+                        android:id="@+id/textViewSweetTooth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:text="Sweet Tooth" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="80">
+                    <TextView
+                        android:id="@+id/textViewSeeAllSweet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/green"
+                        android:text="See all" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewSweet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
 
 
         </LinearLayout>

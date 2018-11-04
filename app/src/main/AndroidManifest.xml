@@ -25,7 +25,11 @@
         <activity android:name=".UI.ForgotPasswordActivity" />
         <activity android:name=".Adapter.InspiredCollectionsAdapter" />
         <activity android:name=".UI.GoOutForLunchDinnerActivity" />
-        <activity android:name=".UI.FoodDeliveryRestroActivity"></activity>
+        <activity android:name=".UI.FoodDeliveryRestroActivity" />
+        <activity android:name=".UI.CartActivity" />
+        <activity android:name=".UI.CheckoutActivity" />
+        <activity android:name=".UI.PaymentActivity" />
+        <activity android:name=".UI.SuccessActivity"></activity>
     </application>
 
 </manifest>

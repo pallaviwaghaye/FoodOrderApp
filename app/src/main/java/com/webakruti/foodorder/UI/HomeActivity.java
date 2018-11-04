@@ -91,30 +91,30 @@ public class HomeActivity extends AppCompatActivity {
                         break;
 
 
-                    case R.id.navigationVisionAndObjective:
-                        toolbarUserDetailsHomeTitle.setText("Vision and objective");
+                    case R.id.navigationFoodList:
+                        toolbarUserDetailsHomeTitle.setText("Food List");
                         fragManager.beginTransaction().replace(R.id.home_container, new HomeFragment()).commit();
                         break;
 
-                    case R.id.navigationSwachhataKendra:
-                        toolbarUserDetailsHomeTitle.setText("Swachhata kendra");
+                    case R.id.navigationYourDetails:
+                        toolbarUserDetailsHomeTitle.setText("Your Details");
                         // toolbarStudentDetailsHomeTitle.setText("My details");
                         // SwachhataKendraFragment fragment = new SwachhataKendraFragment();
                         fragManager.beginTransaction().replace(R.id.home_container, new HomeFragment()).commit();
                         break;
 
-                    case R.id.navigationUseofTechnology:
-                        toolbarUserDetailsHomeTitle.setText("Use of technology");
+                    case R.id.navigationOrderDetails:
+                        toolbarUserDetailsHomeTitle.setText("Order Details");
                         fragManager.beginTransaction().replace(R.id.home_container, new HomeFragment()).commit();
                         break;
 
-                    case R.id.navigationEvent:
-                        toolbarUserDetailsHomeTitle.setText("Event");
+                    case R.id.navigationEditDetails:
+                        toolbarUserDetailsHomeTitle.setText("Edit Details");
                         fragManager.beginTransaction().replace(R.id.home_container, new HomeFragment()).commit();
                         break;
 
-                    case R.id.navigationContactUs:
-                        toolbarUserDetailsHomeTitle.setText("Contact us");
+                    case R.id.navigationSettings:
+                        toolbarUserDetailsHomeTitle.setText("Settings");
                         fragManager.beginTransaction().replace(R.id.home_container, new HomeFragment()).commit();
                         break;
 

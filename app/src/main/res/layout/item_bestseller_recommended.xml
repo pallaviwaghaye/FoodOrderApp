@@ -9,7 +9,7 @@
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="150dp"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:cardBackgroundColor="@color/white"
@@ -47,38 +47,88 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:weightSum="100"
                 android:orientation="horizontal">
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
+                    android:layout_weight="65"
                     android:orientation="horizontal">
                 <TextView
                     android:id="@+id/textViewRestoType"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="3dp"
-                    android:textSize="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15dp"
                     android:gravity="center|left"
                     android:text="Rs. 213" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50"
+                    android:layout_weight="40"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
                     android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/textViewFoodType"
-                    android:layout_width="50dp"
-                    android:layout_height="25dp"
-                    android:gravity="center"
-                    android:background="@drawable/addto_cart_button"
-                    android:textSize="10dp"
-                    android:text="Add +"
-                    android:textColor="@color/green"/>
+                    <LinearLayout
+                        android:id="@+id/linaerLayoutAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60"
+                        android:background="@drawable/bg_details"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/imageViewMinus"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="1dp"
+                            android:padding="5dp"
+                            android:src="@drawable/minus" />
+
+                        <View
+                            android:layout_width="1.6dp"
+                            android:layout_height="fill_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/imageViewMinus"
+                            android:background="@color/green" />
+
+                        <TextView
+                            android:id="@+id/textViewQty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="1"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:layout_width="1.6dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/green" />
+
+                        <ImageView
+                            android:id="@+id/imageViewPlus"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:padding="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:src="@drawable/plus_black" />
+                    </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>

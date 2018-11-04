@@ -9,11 +9,13 @@
     <color name="faint_yellow">#f4e868</color>
     <color name="orange">#ec8c1e</color>
     <color name="orange_red">#f7ef5a28</color>
+    <color name="faint_orange_red">#f7facbbb</color>
     <color name="blue">#007bff</color>
     <color name="dashboard_count_color">#e61a1a</color>
     <color name="grey">#6d8383</color>
     <color name="pink">#FF69B4</color>
     <color name="faintPink">#f7a3af</color>
+    <color name="faintPink1">#f2ced3</color>
     <color name="sky_blue">#47C0EF</color>
     <color name="skyblue">#FF31B2E4</color>
     <color name="faint_blue">#d4eef7</color>

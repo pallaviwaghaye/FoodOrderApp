@@ -16,6 +16,7 @@ import com.webakruti.foodorder.Adapter.FoodHygieneAdapter;
 import com.webakruti.foodorder.Adapter.InspiredCollectionsAdapter;
 import com.webakruti.foodorder.Adapter.GetFoodDeliveredAdapter;
 import com.webakruti.foodorder.Adapter.GoOutLunchDinnerAdapter;
+import com.webakruti.foodorder.Adapter.SweetToothAdapter;
 import com.webakruti.foodorder.R;
 import com.webakruti.foodorder.pageindicator.PageControl;
 
@@ -37,6 +38,7 @@ public class HomeFragment extends Fragment {
     private  RecyclerView recyclerView2;
     private  RecyclerView recyclerView3;
     private  RecyclerView recyclerView4;
+    private  RecyclerView recyclerViewSweet;
     //private  RecyclerView recyclerView1;
 
 
@@ -93,6 +95,11 @@ public class HomeFragment extends Fragment {
         LinearLayoutManager layoutManager4 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView4.setLayoutManager(layoutManager4);
         recyclerView4.setAdapter(new FavoriteCuisineAdapter(getActivity(), 6));
+
+        recyclerViewSweet = (RecyclerView) rootView.findViewById(R.id.recyclerViewSweet);
+        LinearLayoutManager layoutManager5 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewSweet.setLayoutManager(layoutManager5);
+        recyclerViewSweet.setAdapter(new SweetToothAdapter(getActivity(), 6));
     }
 
 

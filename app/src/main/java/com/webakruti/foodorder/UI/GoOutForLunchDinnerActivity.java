@@ -81,7 +81,7 @@ public class GoOutForLunchDinnerActivity extends AppCompatActivity {
         recyclerViewMenu = (RecyclerView)findViewById(R.id.recyclerViewMenu);
         LinearLayoutManager layoutManager = new LinearLayoutManager(GoOutForLunchDinnerActivity.this, LinearLayoutManager.HORIZONTAL, false);
         recyclerViewMenu.setLayoutManager(layoutManager);
-        recyclerViewMenu.setAdapter(new RestroMenuCardImageAdapter(getApplicationContext(), 3));
+        recyclerViewMenu.setAdapter(new RestroMenuCardImageAdapter(getApplicationContext(), 2));
     }
 
     private void initCarouselData(List<Drawable> imageList) {

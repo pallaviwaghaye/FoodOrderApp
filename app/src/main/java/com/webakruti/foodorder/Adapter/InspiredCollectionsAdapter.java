@@ -1,6 +1,7 @@
 package com.webakruti.foodorder.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.webakruti.foodorder.R;
+import com.webakruti.foodorder.UI.FoodDeliveryRestroActivity;
 
 public class InspiredCollectionsAdapter extends RecyclerView.Adapter<InspiredCollectionsAdapter.ViewHolder> {
 
@@ -46,6 +48,15 @@ public class InspiredCollectionsAdapter extends RecyclerView.Adapter<InspiredCol
         viewHolder.textViewBatchCourseDuration.setText(studentbatch.getBatch().getCourse().getDuration());
         viewHolder.textViewBatchStartDate.setText(studentbatch.getBatch().getStartDate());
         viewHolder.textViewBatchEndDate.setText(studentbatch.getBatch().getEndDate());*/
+
+        viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, FoodDeliveryRestroActivity.class);
+                context.startActivity(intent);
+
+            }
+        });
     }
 
     @Override

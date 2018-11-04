@@ -18,12 +18,12 @@ import com.webakruti.foodorder.R;
  * Created by DELL on 11/3/2018.
  */
 
-public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.ViewHolder> {
+public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
     private Context context;
     private int size;
 
-    public RecommendedAdapter(Context context, int size) {
+    public CartAdapter(Context context, int size) {
         this.context = context;
         this.size = size;
 
@@ -31,34 +31,34 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
 
     @NonNull
     @Override
-    public RecommendedAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_bestseller_recommended, viewGroup, false);
-        RecommendedAdapter.ViewHolder viewHolder = new RecommendedAdapter.ViewHolder(view);
+    public CartAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_cart, viewGroup, false);
+        CartAdapter.ViewHolder viewHolder = new CartAdapter.ViewHolder(view);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final RecommendedAdapter.ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(@NonNull final CartAdapter.ViewHolder viewHolder, final int position) {
 
-       /* viewHolder.textViewName.setText("Non-veg cuisine italian thali");
+        viewHolder.textViewName.setText("Non-veg cuisine italian thali");
         double price = 1 * 400;
         int qty = Integer.parseInt(viewHolder.textViewQty.getText().toString());
 
         viewHolder.textViewPrice.setText(price + "");
         viewHolder.textViewQuanityAvailable.setText("Quantity Available : " + "20");
-        viewHolder.textViewQty.setText(qty + "");*/
+        viewHolder.textViewQty.setText(qty + "");
 
-        //final double actualPrice = 213;
+        final double actualPrice = 400;
 
         viewHolder.imageViewPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int qty = Integer.parseInt(viewHolder.textViewQty.getText().toString());
-                if (qty < 10) {
+                if (qty < 20) {
                     qty = qty + 1;
                     viewHolder.textViewQty.setText(qty + "");
-//                    double price = qty * actualPrice;
-//                    viewHolder.textViewPrice.setText(price + "");
+                    double price = qty * actualPrice;
+                    viewHolder.textViewPrice.setText(price + "");
                     //cart.setQtyOrdered(qty);
 
                     //updateCartValueToFirebase(cart);
@@ -75,8 +75,8 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
                 if (qty > 1) {
                     qty = qty - 1;
                     viewHolder.textViewQty.setText(qty + "");
-//                    double price = qty * actualPrice;
-//                    viewHolder.textViewPrice.setText(price + "");
+                    double price = qty * actualPrice;
+                    viewHolder.textViewPrice.setText(price + "");
 //                    cart.setQtyOrdered(qty);
 //                    updateCartValueToFirebase(cart);
 
@@ -105,7 +105,11 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         CardView cardView;
-
+        TextView textViewName;
+        TextView textViewPrice;
+        ImageView imageView;
+        LinearLayout linearLayoutRemove;
+        TextView textViewQuanityAvailable;
         ImageView imageViewMinus;
         ImageView imageViewPlus;
         TextView textViewQty;
@@ -115,10 +119,17 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
             super(itemView);
 
             cardView = (CardView) itemView.findViewById(R.id.cardView);
+            textViewName = (TextView) itemView.findViewById(R.id.textViewName);
+            textViewPrice = (TextView) itemView.findViewById(R.id.textViewPrice);
+            imageView = (ImageView) itemView.findViewById(R.id.imageView);
+            linearLayoutRemove = (LinearLayout) itemView.findViewById(R.id.linearLayoutRemove);
+            textViewQuanityAvailable = (TextView) itemView.findViewById(R.id.textViewQuanityAvailable);
 
             imageViewMinus = (ImageView) itemView.findViewById(R.id.imageViewMinus);
             imageViewPlus = (ImageView) itemView.findViewById(R.id.imageViewPlus);
             textViewQty = (TextView) itemView.findViewById(R.id.textViewQty);
+
+
         }
     }
 }

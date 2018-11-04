@@ -4,23 +4,22 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Button;
 
 import com.webakruti.foodorder.R;
 
-public class ForgotPasswordActivity extends AppCompatActivity {
-    private ImageView imageViewBack;
-
+public class PaymentActivity extends AppCompatActivity {
+    private Button buttonProceed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgot_password);
+        setContentView(R.layout.activity_payment);
 
-        imageViewBack = (ImageView)findViewById(R.id.imageViewBack);
-        imageViewBack.setOnClickListener(new View.OnClickListener() {
+        buttonProceed = (Button)findViewById(R.id.buttonProceed);
+        buttonProceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ForgotPasswordActivity.this, LoginActivity.class);
+                Intent intent = new Intent(PaymentActivity.this, SuccessActivity.class);
                 startActivity(intent);
                 finish();
             }
