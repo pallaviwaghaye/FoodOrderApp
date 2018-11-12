@@ -6,7 +6,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
 import com.webakruti.foodorder.R;
 
 public class RestroMenuCardImageAdapter extends RecyclerView.Adapter<RestroMenuCardImageAdapter.ViewHolder> {
@@ -40,6 +42,10 @@ public class RestroMenuCardImageAdapter extends RecyclerView.Adapter<RestroMenuC
         viewHolder.textViewBatchCourseDuration.setText(studentbatch.getBatch().getCourse().getDuration());
         viewHolder.textViewBatchStartDate.setText(studentbatch.getBatch().getStartDate());
         viewHolder.textViewBatchEndDate.setText(studentbatch.getBatch().getEndDate());*/
+
+        Picasso.with(context)
+                .load(R.drawable.restro_menu)
+                .into(viewHolder.imageViewMenuCardImage);
     }
 
     @Override
@@ -49,13 +55,13 @@ public class RestroMenuCardImageAdapter extends RecyclerView.Adapter<RestroMenuC
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-
+        private ImageView imageViewMenuCardImage;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-
+            imageViewMenuCardImage = (ImageView)itemView.findViewById(R.id.imageViewMenuCardImage);
 
 
         }

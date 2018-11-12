@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
 import com.webakruti.foodorder.R;
 import com.webakruti.foodorder.UI.FoodDeliveryRestroActivity;
 
@@ -48,6 +49,11 @@ public class InspiredCollectionsAdapter extends RecyclerView.Adapter<InspiredCol
         viewHolder.textViewBatchCourseDuration.setText(studentbatch.getBatch().getCourse().getDuration());
         viewHolder.textViewBatchStartDate.setText(studentbatch.getBatch().getStartDate());
         viewHolder.textViewBatchEndDate.setText(studentbatch.getBatch().getEndDate());*/
+
+        Picasso.with(context)
+                .load(R.drawable.inspired)
+                .into(viewHolder.imageViewInspiredImage);
+
 
         viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override

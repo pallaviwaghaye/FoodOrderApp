@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
 import com.webakruti.foodorder.R;
 import com.webakruti.foodorder.UI.FoodDeliveryRestroActivity;
 import com.webakruti.foodorder.UI.GoOutForLunchDinnerActivity;
@@ -54,6 +55,10 @@ public class FoodHygieneAdapter extends RecyclerView.Adapter<FoodHygieneAdapter.
 
             }
         });
+
+        Picasso.with(context)
+                .load(R.drawable.food2)
+                .into(viewHolder.imageViewFoodHyegineImage);
     }
 
     @Override
@@ -65,11 +70,12 @@ public class FoodHygieneAdapter extends RecyclerView.Adapter<FoodHygieneAdapter.
 
 
         private CardView cardView;
-
+        private ImageView imageViewFoodHyegineImage;
         public ViewHolder(View itemView) {
             super(itemView);
 
             cardView = (CardView)itemView.findViewById(R.id.cardView);
+            imageViewFoodHyegineImage = (ImageView)itemView.findViewById(R.id.imageViewFoodHyegineImage);
         }
     }
 }

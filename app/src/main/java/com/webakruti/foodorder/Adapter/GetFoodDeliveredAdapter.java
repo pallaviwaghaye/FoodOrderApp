@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
 import com.webakruti.foodorder.R;
 import com.webakruti.foodorder.UI.FoodDeliveryRestroActivity;
 
@@ -52,6 +53,10 @@ public class GetFoodDeliveredAdapter extends RecyclerView.Adapter<GetFoodDeliver
                 context.startActivity(i);
             }
         });
+
+        Picasso.with(context)
+                .load(R.drawable.masala_prawns)
+                .into(viewHolder.imageViewNonVegImage);
     }
 
     @Override

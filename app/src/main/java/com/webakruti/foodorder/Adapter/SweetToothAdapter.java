@@ -8,7 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
 import com.webakruti.foodorder.R;
 import com.webakruti.foodorder.UI.FoodDeliveryRestroActivity;
 
@@ -51,6 +53,10 @@ public class SweetToothAdapter extends RecyclerView.Adapter<SweetToothAdapter.Vi
 
             }
         });
+
+        Picasso.with(context)
+                .load(R.drawable.sweet)
+                .into(viewHolder.imageViewSweetToothImage);
     }
 
     @Override
@@ -62,11 +68,13 @@ public class SweetToothAdapter extends RecyclerView.Adapter<SweetToothAdapter.Vi
 
 
         private CardView cardView;
+        private ImageView imageViewSweetToothImage;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             cardView = (CardView)itemView.findViewById(R.id.cardView);
+            imageViewSweetToothImage = (ImageView)itemView.findViewById(R.id.imageViewSweetToothImage);
         }
     }
 }

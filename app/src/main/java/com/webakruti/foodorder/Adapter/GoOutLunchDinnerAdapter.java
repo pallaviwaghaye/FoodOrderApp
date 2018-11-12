@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.squareup.picasso.Picasso;
 import com.webakruti.foodorder.R;
 import com.webakruti.foodorder.UI.GoOutForLunchDinnerActivity;
 
@@ -47,6 +48,10 @@ public class GoOutLunchDinnerAdapter extends RecyclerView.Adapter<GoOutLunchDinn
         viewHolder.textViewBatchCourseDuration.setText(studentbatch.getBatch().getCourse().getDuration());
         viewHolder.textViewBatchStartDate.setText(studentbatch.getBatch().getStartDate());
         viewHolder.textViewBatchEndDate.setText(studentbatch.getBatch().getEndDate());*/
+
+        Picasso.with(context)
+                .load(R.drawable.navab_thali)
+                .into(viewHolder.imageViewVegImage);
 
         viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
