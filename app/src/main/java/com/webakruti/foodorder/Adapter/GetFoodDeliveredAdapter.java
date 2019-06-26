@@ -55,7 +55,7 @@ public class GetFoodDeliveredAdapter extends RecyclerView.Adapter<GetFoodDeliver
         });
 
         Picasso.with(context)
-                .load(R.drawable.masala_prawns)
+                .load(R.drawable.prawns1)
                 .into(viewHolder.imageViewNonVegImage);
     }
 

@@ -6,7 +6,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
 import com.webakruti.foodorder.R;
 
 /**
@@ -44,6 +46,10 @@ public class CheckoutAdapter extends RecyclerView.Adapter<CheckoutAdapter.ViewHo
         viewHolder.textViewBatchCourseDuration.setText(studentbatch.getBatch().getCourse().getDuration());
         viewHolder.textViewBatchStartDate.setText(studentbatch.getBatch().getStartDate());
         viewHolder.textViewBatchEndDate.setText(studentbatch.getBatch().getEndDate());*/
+
+        Picasso.with(context)
+                .load(R.drawable.non_veg_thali1)
+                .into(viewHolder.imageView);
     }
 
     @Override
@@ -54,13 +60,13 @@ public class CheckoutAdapter extends RecyclerView.Adapter<CheckoutAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder {
 
 
-
+        private ImageView imageView;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
 
-
+            imageView = (ImageView)itemView.findViewById(R.id.imageView);
 
         }
     }

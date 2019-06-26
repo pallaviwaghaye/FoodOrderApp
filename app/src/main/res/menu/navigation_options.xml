@@ -33,7 +33,7 @@
         <item
             android:id="@+id/navigationOrderDetails"
             android:checked="false"
-            android:icon="@drawable/email5"
+            android:icon="@drawable/email6"
             android:title="Order Details" />
 
         <item

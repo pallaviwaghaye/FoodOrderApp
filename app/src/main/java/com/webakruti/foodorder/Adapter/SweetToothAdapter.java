@@ -55,7 +55,7 @@ public class SweetToothAdapter extends RecyclerView.Adapter<SweetToothAdapter.Vi
         });
 
         Picasso.with(context)
-                .load(R.drawable.sweet)
+                .load(R.drawable.sweet1)
                 .into(viewHolder.imageViewSweetToothImage);
     }
 

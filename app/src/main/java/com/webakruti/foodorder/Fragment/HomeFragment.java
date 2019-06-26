@@ -52,13 +52,13 @@ public class HomeFragment extends Fragment {
 
 
         List<Drawable> list = new ArrayList<>();
-        list.add(getResources().getDrawable(R.drawable.berger));
-        list.add(getResources().getDrawable(R.drawable.cake));
-        list.add(getResources().getDrawable(R.drawable.non_veg_thali));
+        list.add(getResources().getDrawable(R.drawable.berger1));
+        list.add(getResources().getDrawable(R.drawable.cake1));
+        list.add(getResources().getDrawable(R.drawable.non_veg_thali1));
         list.add(getResources().getDrawable(R.drawable.fish_nuggets));
         list.add(getResources().getDrawable(R.drawable.pizza));
-        list.add(getResources().getDrawable(R.drawable.samosa_with_chutney));
-        list.add(getResources().getDrawable(R.drawable.breakfast));
+        list.add(getResources().getDrawable(R.drawable.samosa_with_chutney1));
+        list.add(getResources().getDrawable(R.drawable.breakfast1));
         list.add(getResources().getDrawable(R.drawable.chicken_biriyani));
 
 

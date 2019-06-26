@@ -97,13 +97,14 @@
                     android:background="@drawable/edittext_rectangular_oval"
                     android:hint="Name"
                     android:imeOptions="actionNext"
-                    android:drawableLeft="@drawable/icon_name"
+                    android:drawableLeft="@drawable/person24"
                     android:drawablePadding="10dp"
+                    android:paddingLeft="10dp"
                     android:textColor="@color/dark_blue"
                     android:textColorHint="@color/divider_color"
                     android:textSize="17sp" />
 
-                <EditText
+                <!--<EditText
                     android:id="@+id/editTextEmail"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -113,6 +114,22 @@
                     android:imeOptions="actionNext"
                     android:drawableLeft="@drawable/icon_email"
                     android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/dark_blue"
+                    android:textColorHint="@color/divider_color"
+                    android:textSize="17sp" />-->
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edittext_rectangular_oval"
+                    android:hint="Email"
+                    android:imeOptions="actionNext"
+                    android:drawableLeft="@drawable/email24pink"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="10dp"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/dark_blue"
                     android:textColorHint="@color/divider_color"
@@ -127,14 +144,15 @@
                     android:inputType="number|phone"
                     android:maxLength="10"
                     android:imeOptions="actionNext"
-                    android:drawableLeft="@drawable/icon_mobile"
+                    android:drawableLeft="@drawable/mobile24"
+                    android:paddingLeft="10dp"
                     android:drawablePadding="10dp"
                     android:textColor="@color/dark_blue"
                     android:textColorHint="@color/divider_color"
                     android:textSize="17sp" />
 
 
-                <EditText
+               <!-- <EditText
                     android:id="@+id/editTextPassword"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -147,19 +165,36 @@
                     android:inputType="textPassword"
                     android:textColor="@color/dark_blue"
                     android:textColorHint="@color/divider_color"
+                    android:textSize="17sp" />-->
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edittext_rectangular_oval"
+                    android:hint="Password"
+                    android:drawableLeft="@drawable/lock24pink"
+                    android:drawablePadding="10dp"
+                    android:imeOptions="actionDone"
+                    android:paddingLeft="10dp"
+                    android:inputType="textPassword"
+                    android:textColor="@color/dark_blue"
+                    android:textColorHint="@color/divider_color"
                     android:textSize="17sp" />
 
                 <EditText
                     android:id="@+id/editTextAddress"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/edittext_rectangular_oval"
                     android:hint="Address"
                     android:imeOptions="actionDone"
-                    android:drawableLeft="@drawable/icon_address"
+                    android:drawableLeft="@drawable/address24"
+                    android:paddingLeft="10dp"
                     android:drawablePadding="10dp"
                     android:textColor="@color/dark_blue"
+                    android:maxLines="4"
                     android:textColorHint="@color/divider_color"
                     android:textSize="17sp" />
             </LinearLayout>

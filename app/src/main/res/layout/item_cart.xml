@@ -34,7 +34,7 @@
                     android:id="@+id/imageView"
                     android:layout_width="fill_parent"
                     android:layout_height="170dp"
-                    android:src="@drawable/non_veg_thali" />
+                    android:src="@drawable/book_image_new" />
 
             </LinearLayout>
 

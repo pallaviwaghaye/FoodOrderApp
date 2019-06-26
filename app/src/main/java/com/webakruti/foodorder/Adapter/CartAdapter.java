@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
 import com.webakruti.foodorder.R;
 
 /**
@@ -85,6 +86,11 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
                 }
             }
         });
+
+
+        Picasso.with(context)
+                .load(R.drawable.non_veg_thali1)
+                .into(viewHolder.imageView);
 
         /*//final Student.Studentbatch studentbatch = list.get(position);
 

@@ -18,6 +18,7 @@ public class CheckoutActivity extends AppCompatActivity {
     private ImageView imageViewBack;
     private LinearLayout linearLayoutPayment;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +33,7 @@ public class CheckoutActivity extends AppCompatActivity {
                 finish();
             }
         });
+
 
         linearLayoutPayment = (LinearLayout)findViewById(R.id.linearLayoutPayment);
         linearLayoutPayment.setOnClickListener(new View.OnClickListener() {

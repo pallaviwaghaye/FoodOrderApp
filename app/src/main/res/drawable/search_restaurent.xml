@@ -10,8 +10,8 @@
                 android:topLeftRadius="15dp"></corners>
         </shape>
     </item>
-    <item android:drawable="@drawable/search1"
-        android:height="20dp"
-        android:width="20dp"
+    <item android:drawable="@drawable/search"
+        android:height="14dp"
+        android:width="14dp"
         android:gravity="center"></item>
 </layer-list>

@@ -57,7 +57,7 @@ public class FoodHygieneAdapter extends RecyclerView.Adapter<FoodHygieneAdapter.
         });
 
         Picasso.with(context)
-                .load(R.drawable.food2)
+                .load(R.drawable.food22)
                 .into(viewHolder.imageViewFoodHyegineImage);
     }
 

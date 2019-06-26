@@ -39,9 +39,9 @@ public class FoodDeliveryRestroActivity extends AppCompatActivity {
 
 
         List<Drawable> list = new ArrayList<>();
-        list.add(getResources().getDrawable(R.drawable.kheer));
-        list.add(getResources().getDrawable(R.drawable.navab_thali));
-        list.add(getResources().getDrawable(R.drawable.chicken_biriyani1));
+        list.add(getResources().getDrawable(R.drawable.navab_thali1));
+        list.add(getResources().getDrawable(R.drawable.prawns1));
+        list.add(getResources().getDrawable(R.drawable.food22));
 
 
         initViews();

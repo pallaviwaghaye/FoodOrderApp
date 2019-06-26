@@ -21,9 +21,9 @@
         <!-- <activity android:name=".LoginActivity" /> -->
         <activity android:name=".UI.LoginActivity" />
         <activity android:name=".UI.RegisterActivity" />
-        <activity android:name=".UI.HomeActivity" />
+        <activity android:name=".UI.HomeActivity"
+            android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".UI.ForgotPasswordActivity" />
-        <activity android:name=".Adapter.InspiredCollectionsAdapter" />
         <activity android:name=".UI.GoOutForLunchDinnerActivity" />
         <activity android:name=".UI.FoodDeliveryRestroActivity" />
         <activity android:name=".UI.CartActivity" />

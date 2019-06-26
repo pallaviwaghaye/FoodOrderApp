@@ -44,7 +44,7 @@ public class RestroMenuCardImageAdapter extends RecyclerView.Adapter<RestroMenuC
         viewHolder.textViewBatchEndDate.setText(studentbatch.getBatch().getEndDate());*/
 
         Picasso.with(context)
-                .load(R.drawable.restro_menu)
+                .load(R.drawable.restro_menu1)
                 .into(viewHolder.imageViewMenuCardImage);
     }
 

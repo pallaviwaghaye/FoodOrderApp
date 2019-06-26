@@ -35,10 +35,10 @@ public class GoOutForLunchDinnerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_go_out_for_lunch_dinner);
 
         List<Drawable> list = new ArrayList<>();
-        list.add(getResources().getDrawable(R.drawable.navab_thali));
-        list.add(getResources().getDrawable(R.drawable.lunch_img1));
-        list.add(getResources().getDrawable(R.drawable.lunch_img2));
-        list.add(getResources().getDrawable(R.drawable.lunch_img3));
+        list.add(getResources().getDrawable(R.drawable.navab_thali1));
+        list.add(getResources().getDrawable(R.drawable.lunch_img11));
+        list.add(getResources().getDrawable(R.drawable.lunch_img21));
+        list.add(getResources().getDrawable(R.drawable.lunch_img31));
 
         initViews();
 

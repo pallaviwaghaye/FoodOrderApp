@@ -28,7 +28,7 @@
                 android:background="@drawable/search_css"
                 android:hint="Search for restaurant, cuisine or dish..."
                 android:drawableLeft="@drawable/search_restaurent"
-                android:drawablePadding="10dp"
+                android:drawablePadding="12dp"
                 android:layout_margin="10dp"
                 android:textSize="16dp"
                 >

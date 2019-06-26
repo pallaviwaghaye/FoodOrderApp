@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
 import com.webakruti.foodorder.R;
 
 /**
@@ -95,6 +96,10 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
         viewHolder.textViewBatchCourseDuration.setText(studentbatch.getBatch().getCourse().getDuration());
         viewHolder.textViewBatchStartDate.setText(studentbatch.getBatch().getStartDate());
         viewHolder.textViewBatchEndDate.setText(studentbatch.getBatch().getEndDate());*/
+
+        Picasso.with(context)
+                .load(R.drawable.navab_thali1)
+                .into(viewHolder.imageViewVegImage);
     }
 
     @Override
@@ -105,7 +110,7 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         CardView cardView;
-
+        ImageView imageViewVegImage;
         ImageView imageViewMinus;
         ImageView imageViewPlus;
         TextView textViewQty;
@@ -115,7 +120,7 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
             super(itemView);
 
             cardView = (CardView) itemView.findViewById(R.id.cardView);
-
+            imageViewVegImage = (ImageView) itemView.findViewById(R.id.imageViewVegImage);
             imageViewMinus = (ImageView) itemView.findViewById(R.id.imageViewMinus);
             imageViewPlus = (ImageView) itemView.findViewById(R.id.imageViewPlus);
             textViewQty = (TextView) itemView.findViewById(R.id.textViewQty);

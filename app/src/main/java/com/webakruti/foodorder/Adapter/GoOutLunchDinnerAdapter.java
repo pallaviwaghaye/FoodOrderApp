@@ -50,7 +50,7 @@ public class GoOutLunchDinnerAdapter extends RecyclerView.Adapter<GoOutLunchDinn
         viewHolder.textViewBatchEndDate.setText(studentbatch.getBatch().getEndDate());*/
 
         Picasso.with(context)
-                .load(R.drawable.navab_thali)
+                .load(R.drawable.navab_thali1)
                 .into(viewHolder.imageViewVegImage);
 
         viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
